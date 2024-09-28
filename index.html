@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="da">
-
 <head>
   <meta charset="utf-8">
   <title>Børne- og ungesamrådet i Gentofte</title>
   <meta name="description"
     content="BUS Gentofte, Børne og ungesamrådet i Gentofte repræsenterer spejderne, FDF og DUI i Gentofte Kommune. Bliv spejder i Gentofte Kommune">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import './node_modules/normalize.css/normalize.css';
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-bottom: 300px;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .bog {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    main:after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: -300px;
+      width: 50%;
+      height: 100%;
+      max-height: 226px;
+      transform: translateX(-50%);
+      opacity: 0.8;
+      background-image: url('./images/Samraadet_logo.webp');
+      background-repeat: no-repeat;
+      background-position: 50% bottom;
+      background-size: contain;
+    }
+  </style>
 </head>
 
 <body>
@@ -30,8 +64,8 @@
       </a>
       <br />
       <a href="images/BUS-Gentofte-2024-bog-online.pdf" target="_blank">
-        <img src="images/bog-2024-forside.webp"
-          alt="Billede af forsiden af bogen BUS Gentofte gennem 60 år" class="bog" width="400" height="568">
+        <img src="images/bog-2024-forside.webp" alt="Billede af forsiden af bogen BUS Gentofte gennem 60 år" class="bog"
+          width="400" height="568">
       </a>
     </p>
   </main>
