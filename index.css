@@ -1,0 +1,22 @@
+@import './node_modules/normalize.css/normalize.css';
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 300px;
+    background-image: url('./images/Samraadet_logo.png');
+    background-position: bottom center;
+    background-attachment: scroll;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.bog {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
