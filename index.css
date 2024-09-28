@@ -27,7 +27,7 @@ main:after {
   max-height: 226px;
   transform: translateX(-50%);
   opacity: 0.8;
-  background-image: url('./images/Samraadet_logo.png?as=webp');
+  background-image: url('./images/Samraadet_logo.webp');
   background-repeat: no-repeat;
   background-position: 50% bottom;
   background-size: contain;
