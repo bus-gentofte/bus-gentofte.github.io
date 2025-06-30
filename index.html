@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
   <meta charset="utf-8">
   <title>Børne- og ungesamrådet i Gentofte</title>
@@ -43,6 +44,7 @@
       background-size: contain;
     }
   </style>
+  <link href="https://cdn.jsdelivr.net/npm/@dataforsyningen/okapi@2.4.0/dist/okapi.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -54,6 +56,27 @@
       blot kaldt BUS Gentofte. Du kan finde alle foreningerne i
       <a href="https://www.conventus.dk/gentofte/organisationer/main.php" target="_blank">Gentofte Fritidsportal</a>
     </p>
+
+    <span class="geomarker" data-title="FDF Gentofte" data-address="Dyssegårdsvej 19, 2900 Hellerup" data-description="http://fdf.dk/Gentofte"></span>
+    <span class="geomarker" data-title="Gentofte-Vangede, De Grønne Pigespejdere" data-address="Vangede Bygade 135, 2820 Gentofte" data-description="https://gentofte-vangede.com/"></span>
+    <span class="geomarker" data-title="DUI Leg og Virke" data-address="Horsevej 6, 2820 Gentofte" data-description="https://www.dui.dk/vangede/"></span>
+    <span class="geomarker" data-title="Kragefolket Hellerup, KFUM-Spejderne" data-address="Margrethevej 9, 2900 Hellerup" data-description="https://kragefolket.dk/"></span>
+    <span class="geomarker" data-title="Charlottenlund gruppe, KFUM-Spejderne" data-address="Charlottenlundvej 34, 2900 Hellerup" data-description="https://charlottenlundgruppe.dk/"></span>
+    <span class="geomarker" data-title="Elsdyrstammen Ordrup-Skovshoved gruppe, KFUM-Spejderne" data-address="Morescosvej 9, 2920 Charlottenlund" data-description="https://elsdyrstammen.gruppesite.dk/"></span>
+    <span class="geomarker" data-title="Thingvalla Vangede gruppe, KFUM-Spejderne" data-address="Vangede Bygade 135, 2820 Gentofte" data-description="https://thingvalla.dk/"></span>
+    <span class="geomarker" data-title="1. Klampenborg, DDS" data-address="Christiansholmsvej 16, 2930 Klampenborg" data-description="https://www.1klampenborg.dk/"></span>
+    <span class="geomarker" data-title="Charlottenlundspejderne, DDS" data-address="Ræveskovsvej 14, 2820 Gentofte" data-description="https://charlottenlundspejderne.dk/"></span>
+    <span class="geomarker" data-title="1. Ordrup, DDS" data-address="Charlottenlundvej 36-38, 2900 Hellerup" data-description="http://www.1ordrup.dk/"></span>
+    <span class="geomarker" data-title="1. Gjentofte, DDS" data-address="Jægerborg Alle 148A, 2820 Gentofte" data-description="https://1gjentoftegruppe.dk/"></span>
+    <span class="geomarker" data-title="Dyssegårdsspejderne, DDS" data-address="Ved Renden 51, 2870 Dyssegård" data-description="http://dyssegaardsspejderne.dk/"></span>
+    <span class="geomarker" data-title="Morescospejderne, DDS" data-address="Morescosvej 5-7, 2920 Charlottenlund" data-description="https://morescospejderne.dk/"></span>
+    <span class="geomarker" data-title="Ordrup Gruppe, DDS" data-address="Morescosvej 1A, 2920 Charlottenlund" data-description="https://www.ordrupgruppe.dk/"></span>
+    <span class="geomarker" data-title="Søspejderne Havmændene" data-address="Skovshoved Havn 1A, 2920 Charlottenlund" data-description="https://xn--havmndene-j3a.dk/"></span>
+
+    <div id="map" class="geomap" data-overlays="dhm" data-token="InsertYourTokenHere" style="height: 400px;"
+      data-center="auto">
+    </div>
+
     <p>
       Du kan også bes&oslash;ge <a href="https://samraadet.dk/">B&oslash;rne- og Ungdomsorganisationernes
         Landssamr&aring;d</a>
@@ -69,6 +92,13 @@
       </a>
     </p>
   </main>
+
+  <script type="module">
+    import { Initialize } from 'https://cdn.jsdelivr.net/npm/@dataforsyningen/okapi@2.4.0'
+    new Initialize({
+
+    })
+  </script>
 </body>
 
 </html>
