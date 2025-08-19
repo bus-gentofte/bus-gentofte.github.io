@@ -11,6 +11,8 @@
   <style>
     body {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.2rem;
       margin-bottom: 300px;
     }
 
@@ -19,10 +21,32 @@
       margin: 20px auto;
     }
 
+    section {
+      margin-bottom: 3em;
+    }
+
     .bog {
       width: 100%;
       max-width: 400px;
       height: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      text-align: left;
+      font-size: 0.7rem;
+    }
+
+    th {
+      border-bottom: 1px solid black;
+    }
+
+    tr:hover {
+      background-color: rgba(0, 0, 0, 0.2);
     }
 
     main:after {
@@ -50,45 +74,213 @@
     <h1>B&oslash;rne og ungdomsorganisationernes Samr&aring;d i Gentofte</h1>
     <p>
       I Gentofte Kommune er vi 10 grupper fra Det Danske Spejderkorps, 4 KFUM-Spejder grupper, 2 Grønne Pigespejdere, 1
-      FDF kreds og 1 DUI Leg og virke forening - alle repræsenteret i det lokale samr&aring;d ogs&aring; undertiden bliver vi også
+      FDF kreds og 1 DUI Leg og virke forening - alle repræsenteret i det lokale samr&aring;d ogs&aring; undertiden
+      bliver vi også
       blot kaldt BUS Gentofte.
       <br />Du kan finde alle foreningerne i
-      <a href="https://www.conventus.dk/gentofte/organisationer/main.php" target="_blank">Gentofte Fritidsportal</a>. Herunder kan du se på kortet, hvor vi holder til.
+      <a href="https://www.conventus.dk/gentofte/organisationer/main.php" target="_blank">Gentofte Fritidsportal</a>.
+      Herunder kan du se på kortet, hvor vi holder til.
     </p>
 
-    <span class="geomarker" data-title="FDF Gentofte" data-address="Dyssegårdsvej 19, 2900 Hellerup" data-description="http://fdf.dk/Gentofte"></span>
-    <span class="geomarker" data-title="Gentofte-Vangede, De Grønne Pigespejdere" data-address="Vangede Bygade 135, 2820 Gentofte" data-description="https://gentofte-vangede.com/"></span>
-    <span class="geomarker" data-title="DUI Leg og Virke" data-address="Horsevej 6, 2820 Gentofte" data-description="https://www.dui.dk/vangede/"></span>
-    <span class="geomarker" data-title="Kragefolket Hellerup, KFUM-Spejderne" data-address="Margrethevej 9, 2900 Hellerup" data-description="https://kragefolket.dk/"></span>
-    <span class="geomarker" data-title="Charlottenlund gruppe, KFUM-Spejderne" data-address="Charlottenlundvej 34, 2900 Hellerup" data-description="https://charlottenlundgruppe.dk/"></span>
-    <span class="geomarker" data-title="Elsdyrstammen Ordrup-Skovshoved gruppe, KFUM-Spejderne" data-address="Morescosvej 9, 2920 Charlottenlund" data-description="https://elsdyrstammen.gruppesite.dk/"></span>
-    <span class="geomarker" data-title="Thingvalla Vangede gruppe, KFUM-Spejderne" data-address="Vangede Bygade 135, 2820 Gentofte" data-description="https://thingvalla.dk/"></span>
-    <span class="geomarker" data-title="1. Klampenborg, DDS" data-address="Christiansholmsvej 16, 2930 Klampenborg" data-description="https://www.1klampenborg.dk/"></span>
-    <span class="geomarker" data-title="Charlottenlundspejderne, DDS" data-address="Ræveskovsvej 14, 2820 Gentofte" data-description="https://charlottenlundspejderne.dk/"></span>
-    <span class="geomarker" data-title="1. Ordrup, DDS" data-address="Charlottenlundvej 36, 2900 Hellerup" data-description="http://www.1ordrup.dk/"></span>
-    <span class="geomarker" data-title="1. Gjentofte, DDS" data-address="Jægersborg Alle 148A, 2820 Gentofte" data-description="https://1gjentoftegruppe.dk/"></span>
-    <span class="geomarker" data-title="Dyssegårdsspejderne, DDS" data-address="Ved Renden 51, 2870 Dyssegård" data-description="http://dyssegaardsspejderne.dk/"></span>
-    <span class="geomarker" data-title="Morescospejderne, DDS" data-address="Morescosvej 5A, 2920 Charlottenlund" data-description="https://morescospejderne.dk/"></span>
-    <span class="geomarker" data-title="Ordrup Gruppe, DDS" data-address="Morescosvej 1, 2920 Charlottenlund" data-description="https://www.ordrupgruppe.dk/"></span>
-    <span class="geomarker" data-title="Søspejderne Havmændene" data-address="Skovshoved Havn 1A, 2920 Charlottenlund" data-description="https://havmændene.dk/"></span>
+    <section>
+      <h2>Alle spejdere og FDF i Gentofte Kommune</h2>
 
-    <div id="map" class="geomap" style="height: 500px;" data-username="MASMQXMRHL" data-password="PLTk3!j_r3KxFD!Nq-NK" data-center="auto" data-zoom="7">
-    </div>
+      <span class="geomarker" id="gentofte-fdf" data-title="FDF Gentofte" data-address="Dyssegårdsvej 19, 2900 Hellerup"
+        data-description="http://fdf.dk/Gentofte"></span>
+      <span class="geomarker" data-title="Gentofte-Vangede, De Grønne Pigespejdere"
+        data-address="Vangede Bygade 137, 2820 Gentofte" data-description="https://gentofte-vangede.com/"></span>
+      <span class="geomarker" data-title="DUI Leg og Virke" data-address="Horsevej 6, 2820 Gentofte"
+        data-description="https://www.dui.dk/vangede/"></span>
+      <span class="geomarker" data-title="Kragefolket Hellerup, KFUM-Spejderne"
+        data-address="Margrethevej 9, 2900 Hellerup" data-description="https://kragefolket.dk/"></span>
+      <span class="geomarker" data-title="Charlottenlund gruppe, KFUM-Spejderne"
+        data-address="Charlottenlundvej 34, 2900 Hellerup" data-description="https://charlottenlundgruppe.dk/"></span>
+      <span class="geomarker" data-title="Elsdyrstammen Ordrup-Skovshoved gruppe, KFUM-Spejderne"
+        data-address="Morescosvej 9, 2920 Charlottenlund"
+        data-description="https://elsdyrstammen.gruppesite.dk/"></span>
+      <span class="geomarker" data-title="Thingvalla Vangede gruppe, KFUM-Spejderne"
+        data-address="Vangede Bygade 135, 2820 Gentofte" data-description="https://thingvalla.dk/"></span>
+      <span class="geomarker" data-title="1. Klampenborg, DDS" data-address="Christiansholmsvej 16, 2930 Klampenborg"
+        data-description="https://www.1klampenborg.dk/"></span>
+      <span class="geomarker" data-title="Charlottenlundspejderne, DDS" data-address="Ræveskovsvej 14, 2820 Gentofte"
+        data-description="https://charlottenlundspejderne.dk/"></span>
+      <span class="geomarker" data-title="1. Ordrup, DDS" data-address="Charlottenlundvej 36, 2900 Hellerup"
+        data-description="http://www.1ordrup.dk/"></span>
+      <span class="geomarker" data-title="1. Gjentofte, DDS" data-address="Jægersborg Alle 148A, 2820 Gentofte"
+        data-description="https://1gjentoftegruppe.dk/"></span>
+      <span class="geomarker" data-title="Dyssegårdsspejderne, DDS" data-address="Ved Renden 51, 2870 Dyssegård"
+        data-description="http://dyssegaardsspejderne.dk/"></span>
+      <span class="geomarker" data-title="Morescospejderne, DDS" data-address="Morescosvej 5A, 2920 Charlottenlund"
+        data-description="https://morescospejderne.dk/"></span>
+      <span class="geomarker" data-title="Ordrup Gruppe, DDS" data-address="Morescosvej 1, 2920 Charlottenlund"
+        data-description="https://www.ordrupgruppe.dk/"></span>
+      <span class="geomarker" data-title="Søspejderne Havmændene" data-address="Skovshoved Havn 1A, 2920 Charlottenlund"
+        data-description="https://havmændene.dk/"></span>
 
-    <p>
-      Du kan også bes&oslash;ge <a href="https://samraadet.dk/">B&oslash;rne- og Ungdomsorganisationernes
-        Landssamr&aring;d</a>
-    </p>
-    <p>I 2024 fik Samr&aring;det produceret en bog omkring dets arbejde fra stiftelsen i 1960 til i dag. Du kan her
-      <a target="_blank" href="images/BUS-Gentofte-2024-bog-online.pdf">
-        hente og l&aelig;se bogen om BUS Gentofte gennem 60 år 1960-2024.
-      </a>
-      <br />
-      <a href="images/BUS-Gentofte-2024-bog-online.pdf" target="_blank">
-        <img src="images/bog-2024-forside.webp" alt="Billede af forsiden af bogen BUS Gentofte gennem 60 år" class="bog"
-          width="400" height="568">
-      </a>
-    </p>
+      <div id="map" class="geomap" style="height: 500px;" data-username="MASMQXMRHL"
+        data-password="PLTk3!j_r3KxFD!Nq-NK" data-center="auto" data-zoom="7">
+      </div>
+
+      <p>Nogle grupper har venteliste, men der er grupper hvor du og dit barn kan blive medlem allerede i dag. De
+        enkelte aldersgrupper har lidt forskellige navne</p>
+      <table>
+        <tr>
+          <th>Gruppe</th>
+          <th>0-3 &aring;r <small><br />f&oslash;r skole<br />Familiespejder</small></th>
+          <th>0.-1. klasse<small><br />Mikro, b&aelig;ver</small></th>
+          <th>2.-3. klasse<small><br />Mini, ulve</small></th>
+          <th>4.-5. klasse<small><br />Junior</small></th>
+          <th>6.-8. klasse<small><br />Trop</small></th>
+          <th>Solsikke<small><br /></small></th>
+        </tr>
+        <tr>
+          <td>1. Gjentofte, DDS</td>
+          <td>&checkmark;</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1. Klampenborg, DDS</td>
+          <td>&checkmark;</td>
+          <td></td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1. Ordrup, DDS</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Charlottenlundspejderne, DDS</td>
+          <td>&checkmark;</td>
+          <td></td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+        </tr>
+        <tr>
+          <td>Charlottenlund, KFUM</td>
+          <td></td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Dyssegaard, DDS</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Elsdyrstammen Ordrup-Skovshoved, KFUM</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Gentofte-Vangede, DGP</td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Hellerup, KFUM</td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Havm&aelig;ndene, DDS</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Moresco, DDS</td>
+          <td></td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Ordrup, DDS</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Thingvalla Vangede, KFUM</td>
+          <td></td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td>&checkmark;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Vangede Leg og Virke DUI</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>&checkmark;</td>
+          <td></td>
+        </tr>
+
+      </table>
+    </section>
+    <section>
+      <p>
+        Du kan også bes&oslash;ge <a href="https://samraadet.dk/">B&oslash;rne- og Ungdomsorganisationernes
+          Landssamr&aring;d</a>
+      </p>
+    </section>
+    <section>
+      <h2>Andre nyheder</h2>
+      <p>I 2024 fik Samr&aring;det produceret en bog omkring dets arbejde fra stiftelsen i 1960 til i dag. Du kan her
+        <a target="_blank" href="images/BUS-Gentofte-2024-bog-online.pdf">
+          hente og l&aelig;se bogen om BUS Gentofte gennem 60 år 1960-2024.
+        </a>
+        <br />
+        <a href="images/BUS-Gentofte-2024-bog-online.pdf" target="_blank">
+          <img src="images/bog-2024-forside.webp" alt="Billede af forsiden af bogen BUS Gentofte gennem 60 år"
+            class="bog" width="400" height="568">
+        </a>
+      </p>
+    </section>
   </main>
 
   <script type="module">
